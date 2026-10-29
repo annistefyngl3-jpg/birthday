@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Special Aunty! 🎂</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #fff0f5, #f9d9e8, #fce9d8);
+    color: #813b61;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-title {
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: #a85b80;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 70px);
+    margin-bottom: 20px;
+    color: #a52e68;
+    text-shadow: 2px 3px 10px #ffffff;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    background: #c4457b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px #d99ab8;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+    background: #a52e68;
+}
+
+.gift {
+    font-size: 100px;
+    margin: 25px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.card {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 35px 25px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid #f0b8d0;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #d7a0b7;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ad376e;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.hidden {
+    display: none;
+}
+
+.cake {
+    font-size: 85px;
+    margin: 20px;
+}
+
+.photo-frame {
+    width: 220px;
+    height: 260px;
+    margin: 25px auto;
+    border: 5px solid white;
+    border-radius: 110px 110px 25px 25px;
+    background: #f7d4e3;
+    box-shadow: 0 5px 20px #d59ab4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    font-size: 65px;
+}
+
+footer {
+    padding: 30px 15px;
+    background: rgba(255,255,255,0.4);
+    font-size: 14px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: floatUp 6s linear forwards;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#surprise {
+    scroll-margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 45px 15px;
+    }
+
+    .card {
+        padding: 25px 18px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="small-title">A LITTLE SURPRISE MADE WITH LOVE</div>
+
+    <h1>Happy Birthday! 🎂</h1>
+
+    <p>
+        To my wonderful aunty, someone who deserves
+        all the happiness, love, and beautiful moments
+        this world can offer. 💗
+    </p>
+
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <button onclick="openGift()">Open Your Special Gift 💌</button>
+
+    <p style="font-size:13px; margin-top:25px;">
+        Made with love, especially for you 🌷
+    </p>
+</section>
+
+<section id="surprise" class="hidden">
+
+    <div class="card">
+        <h2>A Letter Just for You 💌</h2>
+
+        <p>
+            Dear Aunty, 💖<br><br>
+
+            Today is all about celebrating the wonderful person
+            you are. You deserve a life filled with endless smiles,
+            peaceful days, good health, and beautiful memories.<br><br>
+
+            May every new day bring you a reason to smile,
+            every dream bring you closer to happiness, and every
+            moment remind you how special you are.<br><br>
+
+            Thank you for being such a precious part of our family.
+            May your birthday be as lovely and beautiful as your heart.<br><br>
+
+            <strong>Happy Birthday, my dearest Aunty! 🌸</strong>
+        </p>
+    </div>
+
+    <div class="cake">🎂</div>
+
+    <h2>Make a Birthday Wish! ✨</h2>
+
+    <p style="margin: 20px;">
+        Close your eyes, make a wish, and let the magic begin!
+    </p>
+
+    <button onclick="celebrate()">Celebrate! 🎉</button>
+
+    <div class="card">
+        <h2>your Beautiful Memories 📸</h2>
+         <img src="./auntyuncle1.png" alt="" height="600" width="300">
+        <p>
+             💕
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>One Last Little Surprise 💝</h2>
+
+        <p id="finalMessage">
+            You make our family more beautiful just by being you.
+        </p>
+
+        <br>
+
+        <button onclick="showFinalMessage()">Read My Final Wish 💗</button>
+    </div>
+
+</section>
+
+<footer>
+    Made with 💖 and lots of love | Happy Birthday, Aunty! 🎂
+</footer>
+
+<script>
+function openGift() {
+    const surprise = document.getElementById("surprise");
+
+    surprise.classList.remove("hidden");
+
+    surprise.scrollIntoView({
+        behavior: "smooth"
+    });
+
+    createHearts(25);
+}
+
+function celebrate() {
+    createHearts(60);
+
+    alert("🎉 Happy Birthday, Aunty! 🎂 May all your wishes come true! 💖");
+}
+
+function createHearts(amount) {
+    const symbols = ["💖", "💕", "🌸", "✨", "💗", "🌷"];
+
+    for (let i = 0; i < amount; i++) {
+        const heart = document.createElement("span");
+
+        heart.className = "heart";
+        heart.textContent = symbols[
+            Math.floor(Math.random() * symbols.length)
+        ];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (16 + Math.random() * 22) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7000);
+    }
+}
+
+document.getElementById("photoInput").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        const photo = document.getElementById("auntyPhoto");
+
+        photo.src = URL.createObjectURL(file);
+        photo.classList.remove("hidden");
+
+        document.getElementById("placeholder").classList.add("hidden");
+    }
+});
+
+function showFinalMessage() {
+    document.getElementById("finalMessage").innerHTML =
+        "Dear Aunty, you are loved more than words can say. 💖 " +
+        "May your days always be filled with laughter, your heart " +
+        "with peace, and your life with countless blessings. 🌸 " +
+        "<br><br>With lots of love, always and forever! 💕";
+
+    createHearts(30);
+}
+</script>
+
+</body>
+</html>
